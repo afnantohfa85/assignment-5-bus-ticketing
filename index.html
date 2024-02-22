@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <style>
+      body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap"
+    >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    >
+    <script>
+      tailwind.config = {
+        theme: {
+    extend: {
+      colors: {
+        white: "#fff",
+        limegreen: {
+          "100": "#1dd100",
+          "200": "#03b800",
+          "300": "rgba(3, 184, 0, 0.4)",
+          "400": "rgba(3, 184, 0, 0.1)",
+          "500": "rgba(29, 209, 0, 0.1)",
+          "600": "rgba(29, 209, 0, 0.4)",
+          "700": "rgba(3, 184, 0, 0.15)",
+          "800": "rgba(29, 209, 0, 0.15)",
+          "900": "rgba(3, 184, 0, 0.09)",
+        },
+        lightcoral: "#f78c9c",
+        gray: {
+          "100": "#030712",
+          "200": "rgba(3, 7, 18, 0.7)",
+          "300": "rgba(3, 7, 18, 0.05)",
+          "400": "rgba(3, 7, 18, 0.3)",
+          "500": "rgba(3, 7, 18, 0.2)",
+          "600": "rgba(3, 7, 18, 0.1)",
+          "700": "rgba(255, 255, 255, 0.8)",
+          "800": "rgba(255, 255, 255, 0.3)",
+          "900": "rgba(255, 255, 255, 0.7)",
+          "1000": "rgba(3, 7, 18, 0.6)",
+          "1100": "rgba(3, 7, 18, 0.8)",
+          "1200": "rgba(3, 7, 18, 0.5)",
+          "1300": "rgba(3, 7, 18, 0.4)",
+        },
+        whitesmoke: "#f7f8f8",
+        gainsboro: "#dedede",
+        darkslategray: "rgba(54, 59, 69, 0.05)",
+      },
+      spacing: {},
+      fontFamily: {
+        raleway: "Raleway",
+        inter: "Inter",
+      },
+      borderRadius: {
+        "69xl": "88px",
+        "8xs": "5px",
+      },
+    },
+    fontSize: {
+      xl: "1.25rem",
+      base: "1rem",
+      "13xl": "2rem",
+      lg: "1.125rem",
+      "21xl": "2.5rem",
+      "5xl": "1.5rem",
+      "17xl": "2.25rem",
+      "3xl": "1.375rem",
+      "10xl": "1.813rem",
+      lgi: "1.188rem",
+      inherit: "inherit",
+    },
+    screens: {
+      lg: {
+        max: "1200px",
+      },
+      mq1050: {
+        raw: "screen and (max-width: 1050px)",
+      },
+      mq750: {
+        raw: "screen and (max-width: 750px)",
+      },
+      mq450: {
+        raw: "screen and (max-width: 450px)",
+      },
+    },
+  },
+  corePlugins: {
+    preflight: false,
+  },
+};
+
+    </script>
+  </head>
+  <body>
+    <div
+      class="w-full h-[238.188rem] relative bg-white overflow-hidden tracking-[normal] mq1050:h-auto mq1050:min-h-[3811]"
+    >
+      <header
+        class="absolute top-[3rem] left-[8.313rem] w-[73.313rem] flex flex-row items-center justify-between gap-[1.25rem] max-w-full text-center text-[2.25rem] text-gray-100 font-raleway mq750:w-[46.625rem]"
+      >
+        <h1
+          class="m-0 relative text-inherit font-extrabold font-inherit whitespace-nowrap"
+        >
+          P-Ticket
+        </h1>
+        <div
+          class="w-[26.688rem] flex flex-row items-start justify-start gap-[0rem_3.5rem] max-w-full text-[1.125rem] text-gray-200 mq750:hidden"
+        >
+          <div class="relative font-medium">Home</div>
+          <div class="relative font-medium">About</div>
+          <div class="relative font-medium">Destination</div>
+          <div class="relative font-medium">Search</div>
+        </div>
+        <button
+          class="cursor-pointer py-[1rem] pr-[1.938rem] pl-[1.813rem] bg-limegreen-500 rounded-xl flex flex-row items-end justify-start gap-[0rem_0.625rem] border-[1px] border-solid border-limegreen-600 hover:bg-limegreen-400 hover:box-border hover:border-[1px] hover:border-solid hover:border-limegreen-300"
+        >
+          <b
+            class="relative text-[1.25rem] font-raleway text-limegreen-100 text-center whitespace-nowrap"
+            >Bus</b
+          >
+          <img
+            class="h-[1.5rem] w-[1.5rem] relative min-h-[1.5rem]"
+            alt=""
+            src="public/busicon.svg"
+          />
+        </button>
+      </header>
+      <section
+        class="absolute top-[8.375rem] left-[8.375rem] w-[73.188rem] flex flex-col items-center justify-start pt-[4.375rem] pb-[8.438rem] pr-[1.25rem] pl-[1.313rem] box-border gap-[2rem_0rem] max-w-full text-center text-[4rem] text-white font-raleway"
+      >
+        <img
+          class="w-full h-full absolute my-0 mx-[!important] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] rounded-[32px] max-w-full overflow-hidden max-h-full object-cover"
+          alt=""
+          src="public/p-ticket-info-frame@2x.png"
+        />
+
+        <div
+          class="w-[46.375rem] flex flex-col items-center justify-start gap-[1rem_0rem] max-w-full"
+        >
+          <h1
+            class="m-0 self-stretch relative text-inherit leading-[5.375rem] font-extrabold font-inherit z-[1] mq450:text-[2.375rem] mq450:leading-[3.25rem] mq1050:text-[3.188rem] mq1050:leading-[4.313rem]"
+          >
+            <span>End-to-End Travel with </span>
+            <span class="text-limegreen-100">P Paribahan</span>
+          </h1>
+          <div
+            class="w-[43.188rem] relative text-[1.125rem] leading-[1.875rem] font-inter flex items-center justify-center max-w-full z-[1]"
+          >
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </div>
+        </div>
+        <button
+          class="cursor-pointer [border:none] py-[1.313rem] pr-[1.375rem] pl-[1.875rem] bg-limegreen-100 rounded-xl flex flex-row items-center justify-end whitespace-nowrap z-[1] hover:bg-limegreen-200"
+        >
+          <b
+            class="relative text-[1.25rem] font-raleway text-gray-100 text-center"
+            >Buy Tickets</b
+          >
+        </button>
+      </section>
+      <section
+        class="absolute top-[89.688rem] left-[0rem] w-full flex flex-col items-start justify-start max-w-full text-center text-[2.5rem] text-gray-100 font-raleway"
+      >
+        <div
+          class="self-stretch rounded-t-69xl rounded-b-none bg-whitesmoke flex flex-col items-center justify-start pt-[7.5rem] px-[1.25rem] pb-[25.563rem] box-border gap-[3rem_0rem] max-w-full mq750:gap-[3rem_0rem]"
+        >
+          <div
+            class="w-[90rem] h-[138rem] relative rounded-t-69xl rounded-b-none bg-whitesmoke hidden max-w-full"
+          ></div>
+          <div
+            class="w-[46.125rem] flex flex-row items-start justify-start py-[0rem] pr-[0.125rem] pl-[0rem] box-border max-w-full"
+          >
+            <div
+              class="flex-1 flex flex-col items-center justify-start gap-[1.5rem_0rem] max-w-full"
+            >
+              <h1
+                class="m-0 relative text-inherit font-bold font-inherit z-[1] mq450:text-[1.5rem] mq1050:text-[2rem]"
+              >
+                P.H Paribahan
+              </h1>
+              <div
+                class="self-stretch relative text-[1.125rem] leading-[1.875rem] font-inter text-gray-1000 z-[1]"
+              >
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[73.125rem] flex flex-col items-start justify-start gap-[1.625rem_0rem] max-w-full text-[2rem]"
+          >
+            <div
+              class="self-stretch rounded-3xl bg-white flex flex-row flex-wrap items-center justify-start py-[0rem] pr-[3.938rem] pl-[2rem] box-border gap-[0rem_2rem] max-w-full z-[1] lg:pr-[1.938rem] lg:box-border mq750:gap-[0rem_2rem]"
+            >
+              <div
+                class="self-stretch w-[73.125rem] relative rounded-3xl bg-white hidden max-w-full"
+              ></div>
+              <div
+                class="flex-1 flex flex-col items-start justify-start py-[1.25rem] px-[0rem] box-border gap-[1.5rem_0rem] min-w-[32.813rem] max-w-full mq750:min-w-full"
+              >
+                <div
+                  class="self-stretch flex flex-row items-center justify-between gap-[1.25rem] max-w-full mq750:flex-wrap"
+                >
+                  <div
+                    class="w-[24.688rem] flex flex-row items-center justify-start gap-[0rem_0.875rem] max-w-full mq450:flex-wrap"
+                  >
+                    <img
+                      class="h-[3rem] w-[4.288rem] relative z-[2]"
+                      loading="eager"
+                      alt=""
+                      src="public/buslogo.svg"
+                    />
+
+                    <div
+                      class="flex-1 flex flex-col items-start justify-start gap-[0.75rem_0rem] min-w-[12.688rem]"
+                    >
+                      <h2
+                        class="m-0 relative text-inherit font-bold font-inherit z-[2] mq450:text-[1.188rem] mq1050:text-[1.625rem]"
+                      >
+                        Greenline Paribahan
+                      </h2>
+                      <div
+                        class="flex flex-row items-start justify-start py-[0rem] px-[0.125rem] text-left text-[1.125rem] text-gray-1000 font-inter"
+                      >
+                        <div class="relative z-[2]">
+                          Coach-009-WEB ! AC_Business
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="cursor-pointer [border:none] py-[0.875rem] pr-[0.813rem] pl-[1.063rem] bg-limegreen-800 rounded-xl flex flex-row items-center justify-start gap-[0.5rem] whitespace-nowrap z-[2] hover:bg-limegreen-700"
+                  >
+                    <div
+                      class="h-[3.5rem] w-[11.25rem] relative rounded-xl bg-limegreen-800 hidden"
+                    ></div>
+                    <img
+                      class="h-[1.75rem] w-[1.75rem] relative z-[1]"
+                      alt=""
+                      src="public/seatgreen.svg"
+                    />
+
+                    <div
+                      class="relative text-[1.125rem] font-medium font-inter text-limegreen-100 text-left z-[1]"
+                    >
+                      40 Seats left
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="self-stretch rounded-3xl bg-whitesmoke flex flex-col items-center justify-start pt-[2rem] pb-[2.063rem] pr-[1.938rem] pl-[2rem] box-border gap-[1.438rem_0rem] max-w-full z-[2] text-left text-[1.125rem] text-gray-1000"
+                >
+                  <div
+                    class="w-[50.5rem] h-[16.125rem] relative rounded-3xl bg-whitesmoke hidden max-w-full"
+                  ></div>
+                  <div
+                    class="self-stretch flex flex-row items-start justify-between py-[0rem] pr-[0.063rem] pl-[0rem] gap-[1.25rem] mq450:flex-wrap"
+                  >
+                    <div class="relative font-semibold z-[3]">Route</div>
+                    <div class="relative font-semibold text-gray-100 z-[3]">
+                      Dhaka - Sylhet
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch h-[0.063rem] relative box-border z-[3] border-t-[1px] border-dashed border-gray-500"
+                  ></div>
+                  <div
+                    class="self-stretch flex flex-row items-start justify-between py-[0rem] pr-[0.063rem] pl-[0rem] gap-[1.25rem] mq450:flex-wrap"
+                  >
+                    <div class="relative font-semibold z-[3]">
+                      Departure Time
+                    </div>
+                    <div
+                      class="relative font-semibold text-gray-100 whitespace-nowrap z-[3]"
+                    >
+                      9:00 PM
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch h-[0.063rem] relative box-border z-[3] border-t-[1px] border-dashed border-gray-500"
+                  ></div>
+                  <div
+                    class="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[0.063rem] pl-[0rem] gap-[1.5rem] z-[3] text-[1rem] text-gray-1100 font-inter mq1050:flex-wrap"
+                  >
+                    <button
+                      class="cursor-pointer [border:none] pt-[1.188rem] pb-[1.125rem] pr-[1.063rem] pl-[1rem] bg-gray-300 rounded-xl flex flex-row items-center justify-center whitespace-nowrap hover:bg-darkslategray"
+                    >
+                      <div
+                        class="h-[3.5rem] w-[14.5rem] relative rounded-xl bg-gray-300 hidden"
+                      ></div>
+                      <div
+                        class="relative text-[1rem] font-medium font-inter text-gray-1100 text-left z-[1]"
+                      >
+                        Boarding Point - Laxmipur
+                      </div>
+                    </button>
+                    <button
+                      class="cursor-pointer [border:none] pt-[1.188rem] pb-[1.125rem] pr-[1.438rem] pl-[1.5rem] bg-gray-300 rounded-xl flex flex-row items-center justify-center whitespace-nowrap hover:bg-darkslategray"
+                    >
+                      <div
+                        class="h-[3.5rem] w-[14.5rem] relative rounded-xl bg-gray-300 hidden"
+                      ></div>
+                      <div
+                        class="relative text-[1rem] font-medium font-inter text-gray-1100 text-left z-[1]"
+                      >
+                        Dropping Point - Bogura
+                      </div>
+                    </button>
+                    <div
+                      class="flex-1 rounded-xl bg-gray-300 flex flex-row items-center justify-center pt-[1.188rem] px-[1.125rem] pb-[1.125rem] box-border min-w-[9rem] whitespace-nowrap"
+                    >
+                      <div
+                        class="h-[3.5rem] w-[14.5rem] relative rounded-xl bg-gray-300 hidden"
+                      ></div>
+                      <div class="relative font-medium z-[1]">
+                        Est. Time - 11 Hour
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center justify-start gap-[0rem_1.375rem]"
+              >
+                <img
+                  class="h-[26.138rem] w-[5rem] relative z-[2]"
+                  loading="eager"
+                  alt=""
+                  src="public/infodevider.svg"
+                />
+
+                <div
+                  class="flex flex-col items-center justify-start py-[1.25rem] px-[0rem] gap-[1.438rem_0rem]"
+                >
+                  <img
+                    class="w-[3rem] h-[3rem] relative z-[2]"
+                    loading="eager"
+                    alt=""
+                    src="public/fare.svg"
+                  />
+
+                  <div
+                    class="h-[5.188rem] relative leading-[2.5rem] inline-block z-[2] mq450:text-[1.188rem] mq450:leading-[2rem]"
+                  >
+                    <p class="m-0">
+                      <b>550 Taka</b>
+                    </p>
+                    <p class="m-0 text-[1.5rem] font-semibold text-gray-1000">
+                      Per Seat
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="self-stretch rounded-3xl bg-white flex flex-row flex-wrap items-start justify-start py-[2rem] pr-[1.875rem] pl-[2rem] box-border gap-[0rem_2rem] max-w-full z-[1] text-left text-[1.125rem] text-gray-1200 font-inter mq750:gap-[0rem_2rem]"
+            >
+              <div
+                class="h-[66rem] w-[73.125rem] relative rounded-3xl bg-white hidden max-w-full"
+              ></div>
+              <div
+                class="flex-1 flex flex-col items-end justify-start gap-[1.5rem_0rem] min-w-[24.75rem] max-w-full mq750:min-w-full"
+              >
+                <div
+                  class="self-stretch flex flex-row items-start justify-start text-center text-[1.5rem] text-gray-100 font-raleway"
+                >
+                  <div
+                    class="relative font-semibold z-[2] mq450:text-[1.188rem]"
+                  >
+                    Select Your Seat
+                  </div>
+                </div>
+                <div
+                  class="self-stretch h-[3.75rem] flex flex-col items-start justify-start gap-[1rem_0rem] mq450:h-auto"
+                >
+                  <div
+                    class="self-stretch h-[0.063rem] relative box-border z-[2] border-t-[1px] border-dashed border-gray-500"
+                  ></div>
+                  <div
+                    class="self-stretch flex flex-row items-start justify-between gap-[1.25rem] mq450:flex-wrap"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-start gap-[0rem_0.313rem]"
+                    >
+                      <img
+                        class="h-[1.75rem] w-[1.75rem] relative z-[2]"
+                        loading="eager"
+                        alt=""
+                        src="public/group-31.svg"
+                      />
+
+                      <div class="relative font-medium z-[2]">Available</div>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-start gap-[0rem_0.313rem] text-limegreen-100"
+                    >
+                      <img
+                        class="h-[1.75rem] w-[1.75rem] relative z-[2]"
+                        loading="eager"
+                        alt=""
+                        src="public/seatgreenfill.svg"
+                      />
+
+                      <div class="relative font-medium z-[2]">Selected</div>
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch h-[0.063rem] relative box-border z-[2] border-t-[1px] border-dashed border-gray-500"
+                  ></div>
+                </div>
+                <button
+                  class="cursor-pointer [border:none] p-[0.75rem] bg-gray-600 w-[6.875rem] rounded-xl flex flex-row items-center justify-center box-border z-[2]"
+                >
+                  <div
+                    class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-gray-600 hidden"
+                  ></div>
+                  <img
+                    class="h-[2rem] w-[2rem] relative z-[1]"
+                    alt=""
+                    src="public/wheel.svg"
+                  />
+                </button>
+                <div
+                  class="self-stretch flex flex-row items-start justify-center gap-[0rem_4.125rem] mq450:gap-[0rem_4.125rem] mq750:flex-wrap mq750:gap-[0rem_4.125rem]"
+                >
+                  <div
+                    class="flex-1 flex flex-row items-start justify-center gap-[0rem_2rem] min-w-[11.813rem] mq450:flex-wrap mq450:gap-[0rem_2rem]"
+                  >
+                    <div
+                      class="flex-1 flex flex-col items-start justify-start gap-[1.5rem_0rem] min-w-[6.063rem]"
+                    >
+                      <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0rem_1.625rem]"
+                      >
+                        <div class="relative font-medium z-[2]">A</div>
+                        <button
+                          class="cursor-pointer [border:none] py-[1.063rem] pr-[2.875rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                        >
+                          <div
+                            class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                          ></div>
+                          <div
+                            class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                          >
+                            A1
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0rem_1.688rem]"
+                      >
+                        <div class="relative font-medium z-[2]">B</div>
+                        <button
+                          class="cursor-pointer [border:none] py-[1.063rem] pr-[3.063rem] pl-[2.813rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                        >
+                          <div
+                            class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                          ></div>
+                          <div
+                            class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left whitespace-nowrap z-[1]"
+                          >
+                            B1
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0rem_1.563rem]"
+                      >
+                        <div class="relative font-medium z-[2]">C</div>
+                        <button
+                          class="cursor-pointer [border:none] py-[1.063rem] pr-[2.813rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                        >
+                          <div
+                            class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                          ></div>
+                          <div
+                            class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                          >
+                            C1
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0rem_1.625rem]"
+                      >
+                        <div class="relative font-medium z-[2]">D</div>
+                        <button
+                          class="cursor-pointer [border:none] py-[1.063rem] pr-[3rem] pl-[2.813rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                        >
+                          <div
+                            class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                          ></div>
+                          <div
+                            class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left whitespace-nowrap z-[1]"
+                          >
+                            D1
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0rem_1.75rem]"
+                      >
+                        <div class="relative font-medium z-[2]">E</div>
+                        <button
+                          class="cursor-pointer py-[1.063rem] pr-[3.125rem] pl-[2.813rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] border-[1px] [border:none]  hover:bg-gainsboro hover:box-border hover:border-[1px] hover:border-solid hover:[border:none]"
+                        >
+                          <div
+                            class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke-100 box-border hidden border-[1px] border-solid [border:none]"
+                          ></div>
+                          <div
+                            class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left whitespace-nowrap z-[1]"
+                          >
+                            E1
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0rem_1.75rem]"
+                      >
+                        <div
+                          class="flex flex-col items-start justify-start gap-[3.625rem_0rem]"
+                        >
+                          <div class="relative font-medium z-[2]">F</div>
+                          <div
+                            class="relative font-medium whitespace-nowrap z-[2]"
+                          >
+                            G
+                          </div>
+                          <div
+                            class="relative font-medium whitespace-nowrap z-[2]"
+                          >
+                            H
+                          </div>
+                          <div class="relative font-medium z-[2]">I</div>
+                          <div class="relative font-medium z-[2]">J</div>
+                        </div>
+                        <div
+                          class="flex-1 flex flex-col items-start justify-start gap-[1.5rem_0rem]"
+                        >
+                          <button
+                            class="cursor-pointer [border:none] py-[1.063rem] pr-[3.125rem] pl-[2.813rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                          >
+                            <div
+                              class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                            ></div>
+                            <div
+                              class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left whitespace-nowrap z-[1]"
+                            >
+                              F1
+                            </div>
+                          </button>
+                          <button
+                            class="cursor-pointer [border:none] py-[1.063rem] pr-[2.938rem] pl-[2.813rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                          >
+                            <div
+                              class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                            ></div>
+                            <div
+                              class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left whitespace-nowrap z-[1]"
+                            >
+                              G1
+                            </div>
+                          </button>
+                          <button
+                            class="cursor-pointer [border:none] py-[1.063rem] pr-[2.813rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                          >
+                            <div
+                              class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                            ></div>
+                            <div
+                              class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                            >
+                              H1
+                            </div>
+                          </button>
+                          <button
+                            class="cursor-pointer [border:none] py-[1.063rem] pr-[3.313rem] pl-[3rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                          >
+                            <div
+                              class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                            ></div>
+                            <div
+                              class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left whitespace-nowrap z-[1]"
+                            >
+                              I1
+                            </div>
+                          </button>
+                          <button
+                            class="cursor-pointer [border:none] py-[1.063rem] pr-[3rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                          >
+                            <div
+                              class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                            ></div>
+                            <div
+                              class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                            >
+                              J1
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-[6.875rem] flex flex-col items-start justify-start gap-[1.5rem_0rem] min-w-[6.875rem] mq450:flex-1"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.625rem] pl-[2.75rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          A2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] px-[0.938rem] bg-whitesmoke self-stretch rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          B2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          C2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.625rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          D2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.75rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          E2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.75rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          F2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer py-[1.063rem] pr-[2.688rem] pl-[2.563rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] border-[1px]  [border:none] hover:bg-gainsboro hover:box-border hover:border-[1px] hover:border-solid hover:[border:none]"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke box-border hidden border-[1px] border-solid border-[border:none]"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          G2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.625rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          H2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.938rem] pl-[2.875rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          I2
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.813rem] pl-[2.75rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center z-[2] hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          J2
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="w-[15.75rem] flex flex-col items-start justify-start gap-[1.5rem] min-w-[15.75rem] z-[2] mq750:flex-1"
+                  >
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          A3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.75rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          A4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="self-stretch flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] px-[0.938rem] bg-whitesmoke flex-1 rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          B3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.625rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          B4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          C3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.5rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          C4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer py-[1.063rem] pr-[2.688rem] pl-[2.563rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center border-[1px] border-solid [border:none]  hover:bg-gainsboro hover:box-border hover:border-[1px] hover:border-solid hover:[border:none]"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke box-border hidden border-[1px] border-solid [border:none]"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          D3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          D4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="self-stretch flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.75rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          E3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] px-[0.938rem] bg-whitesmoke flex-1 rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          E4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.75rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          F3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.75rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          F4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          G3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.5rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          G4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          H3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.563rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          H4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.938rem] pl-[2.875rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          I3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.938rem] pl-[2.813rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          I4
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      class="flex flex-row items-start justify-start gap-[0rem_2rem] mq450:gap-[0rem_2rem]"
+                    >
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.75rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          J3
+                        </div>
+                      </button>
+                      <button
+                        class="cursor-pointer [border:none] py-[1.063rem] pr-[2.813rem] pl-[2.688rem] bg-whitesmoke rounded-xl flex flex-row items-center justify-center hover:bg-gainsboro"
+                      >
+                        <div
+                          class="h-[3.5rem] w-[6.875rem] relative rounded-xl bg-whitesmoke hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1.125rem] font-medium font-inter text-gray-1200 text-left z-[1]"
+                        >
+                          J4
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="h-[62rem] w-[0.125rem] relative box-border z-[2] border-r-[2px] border-dashed border-gray-400 mq1050:w-full mq1050:h-[0.125rem]"
+              ></div>
+              <div
+                class="w-[27.063rem] flex flex-col items-start justify-start gap-[1.5rem_0rem] max-w-full text-[1rem] text-gray-100"
+              >
+                <div
+                  class="relative text-[1.5rem] font-semibold font-raleway text-center z-[2] mq450:text-[1.188rem]"
+                >
+                  Select Your Seat
+                </div>
+                <div
+                  class="w-[25.563rem] h-[0.063rem] relative box-border max-w-full z-[2] border-t-[1px] border-dashed border-gray-500"
+                ></div>
+                <div
+                  class="self-stretch rounded-xl bg-whitesmoke flex flex-col items-center justify-start p-[2rem] box-border gap-[1.5rem_0rem] max-w-full z-[2]"
+                >
+                  <div
+                    class="w-[27.063rem] h-[20.938rem] relative rounded-xl bg-whitesmoke hidden max-w-full"
+                  ></div>
+                  <div
+                    class="self-stretch flex flex-col items-start justify-start gap-[1rem_0rem] max-w-full"
+                  >
+                    <div
+                      class="self-stretch flex flex-row items-start justify-between gap-[1.25rem] mq450:flex-wrap"
+                    >
+                      <div
+                        class="flex flex-row items-start justify-start gap-[0rem_0.188rem]"
+                      >
+                        <div class="relative font-medium z-[3]">Seat</div>
+                        <div
+                          class="flex flex-col items-start justify-start pt-[0.125rem] px-[0rem] pb-[0rem] text-center text-[0.75rem] text-white"
+                        >
+                          <div
+                            class="rounded-8xs bg-limegreen-100 flex flex-row items-center justify-center py-[0rem] pr-[0.5rem] pl-[0.25rem] whitespace-nowrap z-[3]"
+                          >
+                            <div
+                              class="h-[0.813rem] w-[1.438rem] relative rounded-8xs bg-limegreen-100 hidden"
+                            ></div>
+                            <b class="relative z-[4]"> 2</b>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="w-[6.313rem] flex flex-col items-start justify-start"
+                      >
+                        <div class="relative font-medium z-[3]">Class</div>
+                      </div>
+                      <div class="relative font-medium z-[3]">Price</div>
+                    </div>
+                    <div
+                      class="self-stretch h-[0.063rem] relative box-border z-[3] border-t-[1px] border-dashed border-gray-500"
+                    ></div>
+                    <div
+                      class="self-stretch flex flex-row items-start justify-between gap-[1.25rem] text-gray-1000 mq450:flex-wrap"
+                    >
+                      <div
+                        class="flex flex-col items-start justify-start py-[0rem] pr-[0.438rem] pl-[0rem]"
+                      >
+                        <div class="relative z-[3]">C2</div>
+                      </div>
+                      <div class="relative z-[3]">Economoy</div>
+                      <div class="relative z-[3]">550</div>
+                    </div>
+                    <div
+                      class="self-stretch flex flex-row items-start justify-between gap-[1.25rem] text-gray-1000 mq450:flex-wrap"
+                    >
+                      <div
+                        class="flex flex-col items-start justify-start py-[0rem] pr-[0.438rem] pl-[0rem]"
+                      >
+                        <div class="relative z-[3]">C2</div>
+                      </div>
+                      <div class="relative z-[3]">Economoy</div>
+                      <div class="relative z-[3]">550</div>
+                    </div>
+                    <div
+                      class="self-stretch h-[0.063rem] relative box-border z-[3] border-t-[1px] border-solid border-gray-500"
+                    ></div>
+                    <div
+                      class="self-stretch flex flex-row items-start justify-between gap-[1.25rem] mq450:flex-wrap"
+                    >
+                      <div class="relative font-medium z-[3]">Total Price</div>
+                      <div class="relative font-medium z-[3]">BDT 1100</div>
+                    </div>
+                    <div
+                      class="self-stretch rounded-xl bg-white flex flex-row items-center justify-between py-[0.5rem] pr-[0.5rem] pl-[1.375rem] box-border gap-[1.25rem] max-w-full z-[3] text-[0.875rem] text-gray-1300 mq450:flex-wrap"
+                    >
+                      <div
+                        class="h-[3.5rem] w-[23.063rem] relative rounded-xl bg-white hidden max-w-full"
+                      ></div>
+                      <div class="relative z-[4]">Have any copupon?</div>
+                      <button
+                        class="cursor-pointer [border:none] pt-[0.688rem] px-[0.563rem] pb-[0.625rem] bg-limegreen-100 w-[5rem] rounded-lg flex flex-row items-center justify-center box-border z-[4] hover:bg-limegreen-200"
+                      >
+                        <div
+                          class="h-[2.5rem] w-[5rem] relative rounded-lg bg-limegreen-100 hidden"
+                        ></div>
+                        <div
+                          class="relative text-[1rem] font-semibold font-inter text-white text-left z-[1]"
+                        >
+                          Apply
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch flex flex-row items-start justify-between gap-[1.25rem] mq450:flex-wrap"
+                  >
+                    <div class="relative font-medium z-[3]">Grand Total</div>
+                    <div class="relative font-medium z-[3]">BDT 1100</div>
+                  </div>
+                </div>
+                <div
+                  class="self-stretch flex flex-col items-start justify-start gap-[1rem_0rem] max-w-full"
+                >
+                  <div class="relative font-semibold z-[2]">
+                    Passenger Name*
+                  </div>
+                  <div
+                    class="self-stretch rounded-xl box-border flex flex-row items-center justify-start pt-[1.438rem] px-[1.5rem] pb-[1.375rem] max-w-full z-[2] border-[1px] border-solid border-gray-600"
+                  >
+                    <div
+                      class="h-[4rem] w-[27.063rem] relative rounded-xl box-border hidden max-w-full border-[1px] border-solid border-gray-600"
+                    ></div>
+                    <input
+                      class="w-[7.75rem] [border:none] [outline:none] font-inter text-[1rem] bg-[transparent] h-[1.188rem] relative text-gray-1300 text-left flex items-center z-[1]"
+                      placeholder="Enter your name"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="self-stretch flex flex-col items-start justify-start gap-[1rem_0rem] max-w-full"
+                >
+                  <div class="relative font-semibold z-[2]">Phone Number*</div>
+                  <div
+                    class="self-stretch rounded-xl box-border flex flex-row items-center justify-start pt-[1.438rem] px-[1.5rem] pb-[1.375rem] max-w-full z-[2] border-[1px] border-solid border-gray-600"
+                  >
+                    <div
+                      class="h-[4rem] w-[27.063rem] relative rounded-xl box-border hidden max-w-full border-[1px] border-solid border-gray-600"
+                    ></div>
+                    <input
+                      class="w-[12rem] [border:none] [outline:none] font-inter text-[1rem] bg-[transparent] h-[1.188rem] relative text-gray-1300 text-left flex items-center z-[1]"
+                      placeholder="Enter your phone number"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="self-stretch flex flex-col items-start justify-start gap-[1rem_0rem] max-w-full"
+                >
+                  <div class="relative font-semibold z-[2]">Email ID</div>
+                  <div
+                    class="self-stretch rounded-xl box-border flex flex-row items-center justify-start pt-[1.438rem] px-[1.5rem] pb-[1.375rem] max-w-full z-[2] border-[1px] border-solid border-gray-600"
+                  >
+                    <div
+                      class="h-[4rem] w-[27.063rem] relative rounded-xl box-border hidden max-w-full border-[1px] border-solid border-gray-600"
+                    ></div>
+                    <input
+                      class="w-[8.813rem] [border:none] [outline:none] font-inter text-[1rem] bg-[transparent] h-[1.188rem] relative text-gray-1300 text-left flex items-center z-[1]"
+                      placeholder="Enter your email id"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="cursor-pointer [border:none] py-[1.313rem] pr-[1.25rem] pl-[1.313rem] bg-limegreen-100 self-stretch rounded-2xl flex flex-row items-center justify-center z-[2] hover:bg-limegreen-200"
+                >
+                  <div
+                    class="relative text-[1.25rem] font-extrabold font-raleway text-white text-center mq450:text-[1rem]"
+                  >
+                    Next
+                  </div>
+                </button>
+                <div
+                  class="flex flex-row items-start justify-start py-[0rem] px-[2.563rem] box-border max-w-full text-gray-1000"
+                >
+                  <div
+                    class="flex flex-row items-start justify-center gap-[0rem_2.625rem] max-w-full mq450:gap-[0rem_2.625rem] mq750:flex-wrap"
+                  >
+                    <div class="relative [text-decoration:underline] z-[2]">
+                      Terms and Conditions
+                    </div>
+                    <div class="relative [text-decoration:underline] z-[2]">
+                      Cancellation Policy
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer
+          class="self-stretch bg-gray-100 flex flex-col items-center justify-start py-[7.5rem] px-[1.25rem] box-border gap-[3rem] max-w-full z-[1] mt-[-18.062rem] text-center text-[2.25rem] text-white font-raleway mq750:gap-[3rem]"
+        >
+          <div
+            class="w-[90rem] h-[28.563rem] relative bg-gray-100 hidden max-w-full"
+          ></div>
+          <div
+            class="w-[73.125rem] flex flex-row items-start justify-between gap-[1.25rem] max-w-full mq750:flex-wrap"
+          >
+            <div
+              class="w-[23.375rem] flex flex-col items-start justify-start gap-[1rem_0rem] max-w-full"
+            >
+              <h1
+                class="m-0 relative text-inherit font-extrabold font-inherit z-[1] mq450:text-[1.375rem] mq1050:text-[1.813rem]"
+              >
+                P-Ticket
+              </h1>
+              <div
+                class="self-stretch relative text-[1.125rem] leading-[1.875rem] font-inter text-gray-700 text-left z-[1]"
+              >
+                P-Ticket is a digital platform to make your daily commuting
+                better.
+              </div>
+            </div>
+            <div
+              class="h-[6.188rem] w-[11.813rem] flex flex-col items-end justify-start gap-[1.25rem_0rem] text-[1.25rem]"
+            >
+              <div class="relative font-semibold z-[1] mq450:text-[1rem]">
+                Download our app
+              </div>
+              <img
+                class="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full z-[1]"
+                loading="eager"
+                alt=""
+                src="public/group-104.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="w-[73.125rem] h-[3.188rem] flex flex-col items-start justify-start gap-[2rem_0rem] max-w-full text-left text-[1rem] text-gray-900 font-inter mq750:gap-[2rem_0rem] mq1050:h-auto"
+          >
+            <div
+              class="self-stretch h-[0.125rem] relative box-border z-[1] border-t-[1.5px] border-dashed border-gray-800"
+            ></div>
+            <div
+              class="self-stretch flex flex-row items-start justify-between gap-[1.25rem] max-w-full mq1050:flex-wrap"
+            >
+              <div class="relative inline-block max-w-full z-[1]">
+                @all rights reserved, P-Ticket services limited.2024
+              </div>
+              <div
+                class="flex flex-row items-start justify-start gap-[0rem_2rem] max-w-full text-white mq750:flex-wrap mq750:gap-[0rem_2rem]"
+              >
+                <div class="relative font-medium z-[1]">Terms & condition</div>
+                <div class="relative font-medium z-[1]">
+                  Return & refund policy
+                </div>
+                <div class="relative font-medium z-[1]">Privacy policy</div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+      <section
+        class="absolute top-[38.438rem] left-[8.438rem] w-[73.125rem] flex flex-col items-center justify-start gap-[3.875rem_0rem] max-w-full text-left text-[2.25rem] text-gray-100 font-inter"
+      >
+        <div
+          class="w-[63.188rem] flex flex-row items-start justify-start pt-[0rem] px-[1.25rem] pb-[3.625rem] box-border max-w-full"
+        >
+          <div
+            class="flex-1 flex flex-row items-start justify-start py-[0rem] pr-[0.063rem] pl-[0rem] box-border gap-[1.438rem] max-w-full z-[1] mq1050:flex-wrap"
+          >
+            <div
+              class="flex-[0.9738] rounded-3xl bg-white box-border flex flex-row items-center justify-start py-[2rem] pr-[3.313rem] pl-[2rem] gap-[1rem] min-w-[13.313rem] text-center border-b-[3px] border-solid border-limegreen-100 mq450:flex-1"
+            >
+              <div
+                class="h-[8.625rem] w-[19.25rem] relative rounded-3xl bg-white box-border hidden border-b-[3px] border-solid border-limegreen-100"
+              ></div>
+              <img
+                class="h-[4rem] w-[4rem] relative z-[1]"
+                loading="eager"
+                alt=""
+                src="public/people.svg"
+              />
+
+              <div
+                class="flex-1 flex flex-col items-start justify-start gap-[0.5rem_0rem]"
+              >
+                <b
+                  class="relative z-[1] mq450:text-[1.375rem] mq1050:text-[1.813rem]"
+                  >500K+</b
+                >
+                <div
+                  class="relative text-[1.125rem] text-gray-1000 text-left whitespace-nowrap z-[1]"
+                >
+                  Registered users
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-1 rounded-3xl bg-white box-border flex flex-row items-center justify-start py-[2rem] pr-[2.938rem] pl-[2rem] gap-[1rem] min-w-[13.313rem] border-b-[3px] border-solid border-limegreen-100"
+            >
+              <div
+                class="h-[8.625rem] w-[19.25rem] relative rounded-3xl bg-white box-border hidden border-b-[3px] border-solid border-limegreen-100"
+              ></div>
+              <img
+                class="h-[4rem] w-[4rem] relative z-[1]"
+                loading="eager"
+                alt=""
+                src="public/ticketcupon.svg"
+              />
+
+              <div
+                class="flex-1 flex flex-col items-start justify-start gap-[0.5rem_0rem]"
+              >
+                <b
+                  class="relative z-[1] mq450:text-[1.375rem] mq1050:text-[1.813rem]"
+                  >1.7 lacks</b
+                >
+                <div class="relative text-[1.125rem] text-gray-1000 z-[1]">
+                  Tickets sold
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-[0.9214] rounded-3xl bg-white box-border flex flex-row items-center justify-start py-[2rem] pr-[4.063rem] pl-[2rem] gap-[1rem] min-w-[13.313rem] border-b-[3px] border-solid border-limegreen-100 mq450:flex-1"
+            >
+              <div
+                class="h-[8.625rem] w-[19.25rem] relative rounded-3xl bg-white box-border hidden border-b-[3px] border-solid border-limegreen-100"
+              ></div>
+              <img
+                class="h-[4rem] w-[4rem] relative z-[1]"
+                loading="eager"
+                alt=""
+                src="public/stoppage.svg"
+              />
+
+              <div
+                class="flex-1 flex flex-col items-start justify-start gap-[0.5rem_0rem]"
+              >
+                <b
+                  class="relative z-[1] mq450:text-[1.375rem] mq1050:text-[1.813rem]"
+                  >80K+</b
+                >
+                <div class="relative text-[1.125rem] text-gray-1000 z-[1]">
+                  Rental partners
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="self-stretch flex flex-col items-center justify-start gap-[3rem_0rem] max-w-full text-center text-[2.5rem] font-raleway"
+        >
+          <h1
+            class="m-0 w-[24.188rem] relative text-inherit font-bold font-inherit inline-block max-w-full box-border pl-[1.25rem] pr-[1.25rem] mq450:text-[1.5rem] mq1050:text-[2rem]"
+          >
+            Best offers for you
+          </h1>
+          <div
+            class="self-stretch flex flex-row items-start justify-center gap-[0rem_1.5rem] max-w-full text-left text-gray-1100 font-inter mq1050:flex-wrap"
+          >
+            <div
+              class="flex-[0.9711] flex flex-row items-center justify-between py-[3.25rem] pr-[3.25rem] pl-[3.188rem] box-border relative min-w-[23.25rem] gap-[1.25rem] max-w-full mq450:min-w-full mq750:flex-wrap mq750:justify-center mq1050:flex-1"
+            >
+              <img
+                class="h-full w-full absolute my-0 mx-[!important] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] max-w-full overflow-hidden max-h-full"
+                loading="eager"
+                alt=""
+                src="public/group-115.svg"
+              />
+
+              <div
+                class="relative leading-[2.25rem] inline-block min-w-[13.5rem] z-[1] mq750:flex-1"
+              >
+                <p class="m-0">
+                  <span>
+                    <span class="font-black">15% OFF</span>
+                  </span>
+                </p>
+                <p class="m-0 text-[1.25rem]">
+                  <span>
+                    <span class="font-semibold">on your next purchase</span>
+                  </span>
+                </p>
+                <p class="m-0 text-[1.125rem] font-medium text-gray-1200">
+                  use by January 2024
+                </p>
+              </div>
+              <div
+                class="h-[5.5rem] relative leading-[180%] text-center inline-block z-[1] text-[2rem] text-gray-100 font-raleway mq450:text-[1rem] mq450:leading-[2.875rem]"
+              >
+                <p class="m-0">
+                  <b>NEW15</b>
+                </p>
+                <p class="m-0 text-[1.25rem] font-medium text-gray-1300">
+                  Coupon Code
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex-1 rounded-3xl bg-lightcoral flex flex-row items-center justify-start py-[0rem] pr-[2.375rem] pl-[3.188rem] box-border gap-[0rem_1.25rem] min-w-[23.25rem] max-w-full mq450:flex-wrap mq450:min-w-full mq1050:flex-1"
+            >
+              <div
+                class="self-stretch w-[35.813rem] relative rounded-3xl bg-lightcoral hidden max-w-full"
+              ></div>
+              <div
+                class="flex-1 flex flex-col items-start justify-start py-[1.25rem] pr-[1.438rem] pl-[0rem] box-border min-w-[9.688rem]"
+              >
+                <div class="relative leading-[2.25rem] z-[1]">
+                  <p class="m-0">
+                    <span>
+                      <span class="font-black">20% OFF</span>
+                    </span>
+                  </p>
+                  <p class="m-0 text-[1.25rem]">
+                    <span>
+                      <span class="font-semibold">on your next purchase</span>
+                    </span>
+                  </p>
+                  <p class="m-0 text-[1.125rem] font-medium text-gray-1200">
+                    use by January 2024
+                  </p>
+                </div>
+              </div>
+              <img
+                class="h-[13.75rem] w-[3rem] relative z-[1]"
+                loading="eager"
+                alt=""
+                src="public/cupondevider.svg"
+              />
+
+              <div
+                class="h-[5.5rem] relative leading-[180%] text-center inline-block z-[1] text-[2rem] text-gray-100 font-raleway mq450:text-[1rem] mq450:leading-[2.875rem]"
+              >
+                <p class="m-0">
+                  <b>Couple 20</b>
+                </p>
+                <p class="m-0 text-[1.25rem] font-medium text-gray-1300">
+                  Coupon Code
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="cursor-pointer py-[1.313rem] pr-[1.375rem] pl-[1.875rem] bg-[transparent] rounded-xl flex flex-row items-center justify-end whitespace-nowrap border-[1px] border-solid border-limegreen-100 hover:bg-limegreen-900 hover:box-border hover:border-[1px] hover:border-solid hover:border-limegreen-200 mq450:w-[calc(100%_-_40px)]"
+        >
+          <b
+            class="relative text-[1.25rem] font-raleway text-limegreen-100 text-center"
+            >See All Offers</b
+          >
+        </button>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
